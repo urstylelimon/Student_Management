@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+    <h1>This is Employee details page</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Adress</th>
+            <th>Number</th>
+        </tr>
+        {% for emp in emps %}
+        <tr>
+            <td>{{emp.name}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
