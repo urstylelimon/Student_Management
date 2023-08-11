@@ -27,9 +27,25 @@ def show(request):
     return render(request,'enroll/show.html',content)
 
 def update(request):
-    if request.method = 'POST':
-        print()
+    if request.method == 'POST':
 
+        pk = request.POST.get('id')
+
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        address = request.POST.get('address')
+        number = request.POST.get('phone')
+
+        user_update = Employee.objects.get(id = pk )
+
+        user_update.name = name
+        user_update.email = email
+        user_update.address = address
+        user_update.phone = number
+        user_update.save()
+
+        return HttpResponse("Employee record update Sucessfully")
+    return render(request,'enroll/update.html')
 
 def delete(request):
     if request.method == 'POST':

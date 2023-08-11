@@ -8,6 +8,7 @@
     <h1>This is Employee details page</h1>
     <table>
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Adress</th>
@@ -15,6 +16,7 @@
         </tr>
         {% for emp in emps %}
         <tr>
+            <td>{{emp.id}}</td>
             <td>{{emp.name}}</td>
             <td>{{emp.email}}</td>
             <td>{{emp.address}}</td>
