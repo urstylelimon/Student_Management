@@ -38,10 +38,17 @@ def update(request):
 
         user_update = Employee.objects.get(id = pk )
 
-        user_update.name = name
-        user_update.email = email
-        user_update.address = address
-        user_update.phone = number
+
+
+        if name:
+            user_update.name = name
+        if email:
+            user_update.email = email
+        if address:
+            user_update.address = address
+        if number:
+            user_update.phone = number
+
         user_update.save()
 
         return HttpResponse("Employee record update Sucessfully")
