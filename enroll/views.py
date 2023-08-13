@@ -3,6 +3,8 @@ from enroll.models import Employee
 from django.shortcuts import HttpResponse
 
 # Create your views here.
+def home(request):
+    return render(request,'enroll/home.html')
 def add(request):
     if request.method == 'POST':
         name = request.POST.get('name')
